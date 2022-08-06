@@ -1,0 +1,272 @@
+:root {
+
+    /* COLOR */
+    --bright-red: hsl(12, 88%, 59%);
+    --dark-blue: hsl(228, 39%, 23%);
+    --dark-grayish-blue: hsl(227, 12%, 61%);
+    --very-dark-blue: hsl(233, 12%, 13%);
+    --very-pale-red: hsl(13, 100%, 96%);
+    --very-light-gray: hsl(0, 0%, 98%);
+
+    /* FONT SIZE */
+    --fs-16: 16px;
+
+    /* FONT WEIGHT */
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+
+    /* FONT FAMILY */
+    --ff-be-vietnam-pro-regular: 'Be Vietnam Pro Regular';
+    --ff-be-vietnam-pro-light: 'Be Vietnam Pro Light';
+    --ff-be-vietnam-pro-bold: 'Be Vietnam Pro Bold'
+}
+
+/* IMPoRTATION OF FONTS */
+
+/* REGULAR */
+@font-face {
+    font-family: 'Be Vietnam Pro Regular';
+    src: url('./../../assets/fonts/be-vietnam/BeVietnam-Regular.ttf');
+}
+
+/* BOLD */
+@font-face {
+    font-family: 'Be Vietnam Pro Bold';
+    src: url('./../fonts/be-vietnam/BeVietnam-Bold.ttf');
+}
+
+/* LIGHT */
+@font-face {
+    font-family: 'Be Vietnam Pro Light';
+    src: url('./../../assets/fonts/be-vietnam/BeVietnam-Light.ttf');
+}
+
+* {
+    font-family: var(--ff-be-vietnam-pro-light);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out
+}
+
+.btn:hover {
+    box-shadow: 1px 1px 5px var(--bright-red);
+    transition: 0.3s ease-in-out
+}
+
+.btn-primary {
+    background-color: var(--bright-red);
+    color: var(--very-light-gray);
+}
+
+.rounded {
+    border-radius: 20px;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.col-6 {
+    width: 50%;
+    padding-inline: 1rem;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mt-3 {
+    margin-top: 3rem;
+}
+
+.mt-4 {
+    margin-top: 4rem;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}
+
+.title {
+    color: var(--dark-blue);
+    font-size: 50px;
+    line-height: 55px;
+    font-family: var(--ff-be-vietnam-pro-bold);
+}
+
+.subtitle {
+    color: var(--dark-grayish-blue)
+}
+
+/* DESIGN FOR DESKTOP NOW */
+.container {
+    padding-inline: 10%;
+}
+
+/* NAVBAR DESIGN */
+.header {
+    width: 100%;
+    background-image: url('./../../images/bg-tablet-pattern.svg');
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.navbar-list {
+    display: flex;
+}
+
+.navbar-list-item {
+    padding-inline: 20px;
+    color: var(--dark-blue)
+}
+
+.navbar-list-item:hover {
+    color: var(--dark-grayish-blue)
+}
+
+.navbar {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--ff-be-vietnam-pro-bold);
+}
+
+/* HAMBURGER DESIGN */
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--very-dark-blue);
+}
+
+/* HERO DESIGN */
+.hero {
+    height: 90vh;
+    padding-top: 2rem;
+}
+
+.hero .row .col-6:nth-child(1) {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+/* MOBILE DESIGN */
+@media only screen and (max-width: 768px) {
+    body {
+        /*  background: red */
+    }
+
+    .container {
+        padding-inline: 1rem;
+    }
+
+    .row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .col-6 {
+        width: 100%;
+        padding-inline: 1rem;
+    }
+
+    .title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .mobile-none {
+        display: none
+    }
+
+    /* NAVBAR DESIGN */
+    .navbar-list {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        transition: 0.3s;
+        text-align: center;
+        width: 90%;
+        background-color: var(--very-light-gray);
+        border-radius: 20px;
+        padding: 5vh 0
+    }
+
+    .navbar-list.active {
+        left: 5%
+    }
+
+    .navbar-list-item {
+        padding: 10px 0
+    }
+
+    /* HAMBURGER DESIGN */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg)
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg)
+    }
+
+    /* HERO DESIGN */
+    .hero {
+        height: auto;
+        text-align: center;
+    }
+
+    .hero .row {
+        flex-direction: column-reverse;
+    }
+}
