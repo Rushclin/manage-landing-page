@@ -123,6 +123,13 @@ li {
     font-family: var(--ff-be-vietnam-pro-bold);
 }
 
+.title-2 {
+    color: var(--dark-blue);
+    font-size: 40px;
+    line-height: 55px;
+    font-family: var(--ff-be-vietnam-pro-bold);
+}
+
 .subtitle {
     color: var(--dark-grayish-blue)
 }
@@ -181,6 +188,7 @@ li {
 .hero {
     height: 90vh;
     padding-top: 2rem;
+    padding-bottom: 10vh;
 }
 
 .hero .row .col-6:nth-child(1) {
@@ -188,6 +196,40 @@ li {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
+}
+
+/* SECTION 1 DESIGN */
+.section-1 {
+    padding: 10vh 0;
+}
+
+.card {
+    display: flex;
+    padding-bottom: 7vh;
+}
+
+.card-header {
+    padding: 0 20px;
+}
+
+.card-number {
+    background: var(--bright-red);
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: var(--very-light-gray);
+    font-family: var(--ff-be-vietnam-pro-bold);
+}
+
+.card-title {
+    font-family: var(--ff-be-vietnam-pro-bold);
+    font-size: 20px;
+    padding: 0 0 10px 0;
+    color: var(--dark-blue)
+}
+
+.card-subtitle {
+    color: var(--dark-grayish-blue);
+    font-size: 12px;
 }
 
 /* MOBILE DESIGN */
@@ -269,4 +311,44 @@ li {
     .hero .row {
         flex-direction: column-reverse;
     }
+
+    /* SECTIOn 1 DESIGN */
+    .section-1 .container .row .col-6:nth-child(1) {
+        text-align: center;
+        padding: 0 0 5vh 0;
+    }
+
+    .section-1 .container .row .col-6:nth-child(2) {
+        margin-top: 2rem
+    }
+
+    .card {
+        display: inline-table;
+        padding: 0 0 10px 0;
+    }
+
+    .card-header {
+        padding: 0 0px;
+    }
+
+    .card-number {
+        background: var(--bright-red);
+        /*  padding: 5px 20px; */
+        border-radius: 20px;
+        color: var(--very-light-gray);
+        font-family: var(--ff-be-vietnam-pro-bold);
+    }
+
+    .card-title {
+        top: -30px;
+        left: 55px;
+        position: relative;
+        font-size: 15px;
+    }
+
+    .card-subtitle {
+        top: -20px;
+        position: relative
+    }
+
 }
