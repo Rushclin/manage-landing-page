@@ -1,5 +1,4 @@
 :root {
-
     /* COLOR */
     --bright-red: hsl(12, 88%, 59%);
     --dark-blue: hsl(228, 39%, 23%);
@@ -17,29 +16,29 @@
     --fw-700: 700;
 
     /* FONT FAMILY */
-    --ff-be-vietnam-pro-regular: 'Be Vietnam Pro Regular';
-    --ff-be-vietnam-pro-light: 'Be Vietnam Pro Light';
-    --ff-be-vietnam-pro-bold: 'Be Vietnam Pro Bold'
+    --ff-be-vietnam-pro-regular: "Be Vietnam Pro Regular";
+    --ff-be-vietnam-pro-light: "Be Vietnam Pro Light";
+    --ff-be-vietnam-pro-bold: "Be Vietnam Pro Bold";
 }
 
 /* IMPoRTATION OF FONTS */
 
 /* REGULAR */
 @font-face {
-    font-family: 'Be Vietnam Pro Regular';
-    src: url('./../../assets/fonts/be-vietnam/BeVietnam-Regular.ttf');
+    font-family: "Be Vietnam Pro Regular";
+    src: url("./../../assets/fonts/be-vietnam/BeVietnam-Regular.ttf");
 }
 
 /* BOLD */
 @font-face {
-    font-family: 'Be Vietnam Pro Bold';
-    src: url('./../fonts/be-vietnam/BeVietnam-Bold.ttf');
+    font-family: "Be Vietnam Pro Bold";
+    src: url("./../fonts/be-vietnam/BeVietnam-Bold.ttf");
 }
 
 /* LIGHT */
 @font-face {
-    font-family: 'Be Vietnam Pro Light';
-    src: url('./../../assets/fonts/be-vietnam/BeVietnam-Light.ttf');
+    font-family: "Be Vietnam Pro Light";
+    src: url("./../../assets/fonts/be-vietnam/BeVietnam-Light.ttf");
 }
 
 * {
@@ -64,12 +63,12 @@ li {
 
 .btn {
     padding: 10px 20px;
-    transition: 0.3s ease-in-out
+    transition: 0.3s ease-in-out;
 }
 
 .btn:hover {
     box-shadow: 1px 1px 5px var(--bright-red);
-    transition: 0.3s ease-in-out
+    transition: 0.3s ease-in-out;
 }
 
 .btn-primary {
@@ -131,7 +130,7 @@ li {
 }
 
 .subtitle {
-    color: var(--dark-grayish-blue)
+    color: var(--dark-grayish-blue);
 }
 
 /* DESIGN FOR DESKTOP NOW */
@@ -142,7 +141,7 @@ li {
 /* NAVBAR DESIGN */
 .header {
     width: 100%;
-    background-image: url('./../../images/bg-tablet-pattern.svg');
+    background-image: url("./../../images/bg-tablet-pattern.svg");
     height: auto;
     background-repeat: no-repeat;
     background-position: right;
@@ -154,11 +153,11 @@ li {
 
 .navbar-list-item {
     padding-inline: 20px;
-    color: var(--dark-blue)
+    color: var(--dark-blue);
 }
 
 .navbar-list-item:hover {
-    color: var(--dark-grayish-blue)
+    color: var(--dark-grayish-blue);
 }
 
 .navbar {
@@ -224,12 +223,55 @@ li {
     font-family: var(--ff-be-vietnam-pro-bold);
     font-size: 20px;
     padding: 0 0 10px 0;
-    color: var(--dark-blue)
+    color: var(--dark-blue);
 }
 
 .card-subtitle {
     color: var(--dark-grayish-blue);
     font-size: 12px;
+}
+
+/* SECTION 3 DESIGN */
+.section-3 {
+    background-color: var(--bright-red);
+    padding: 10vh 0;
+    background-image: url("./../../images/bg-simplify-section-desktop.svg");
+}
+
+.section-3 .container .row .col-6:nth-child(2) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.color-white {
+    color: white;
+}
+
+.section-3 .color-white {
+    font-size: 35px;
+}
+
+.bg-white {
+    background: var(--very-light-gray);
+    color: var(--bright-red);
+}
+
+.footer {
+    padding: 10vh 0;
+    background-color: var(--very-dark-blue);
+}
+
+.list-social {
+    display: flex;
+}
+
+.list-social-item {
+    margin-right: 20px;
+}
+
+.list-social-item a:hover {
+    color: red;
 }
 
 /* MOBILE DESIGN */
@@ -259,7 +301,7 @@ li {
     }
 
     .mobile-none {
-        display: none
+        display: none;
     }
 
     /* NAVBAR DESIGN */
@@ -273,15 +315,15 @@ li {
         width: 90%;
         background-color: var(--very-light-gray);
         border-radius: 20px;
-        padding: 5vh 0
+        padding: 5vh 0;
     }
 
     .navbar-list.active {
-        left: 5%
+        left: 5%;
     }
 
     .navbar-list-item {
-        padding: 10px 0
+        padding: 10px 0;
     }
 
     /* HAMBURGER DESIGN */
@@ -295,11 +337,11 @@ li {
     }
 
     .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg)
+        transform: translateY(8px) rotate(45deg);
     }
 
     .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg)
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     /* HERO DESIGN */
@@ -319,7 +361,7 @@ li {
     }
 
     .section-1 .container .row .col-6:nth-child(2) {
-        margin-top: 2rem
+        margin-top: 2rem;
     }
 
     .card {
@@ -348,7 +390,17 @@ li {
 
     .card-subtitle {
         top: -20px;
-        position: relative
+        position: relative;
     }
 
+    .section-3 {
+        text-align: center;
+        background-image: url("./../../images/bg-simplify-section-mobile.svg");
+        background-repeat: no-repeat;
+    }
+
+    .section-3 .container .row .col-6:nth-child(2) {
+        justify-content: center;
+        padding-top: 10vh;
+    }
 }
